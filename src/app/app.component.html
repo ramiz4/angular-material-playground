@@ -1,0 +1,38 @@
+<button mat-stroked-button (click)="setLocale()">US</button>
+<button mat-stroked-button (click)="setLocale('de-DE')">DE</button>
+<button mat-stroked-button (click)="setLocale('de-CH')">CH</button>
+
+<br /><br />
+
+<div class="example-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Amount</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="0.00"
+      class="text-right"
+      [value]="amountFormattedNumber"
+    />
+    <span matPrefix>{{ localeCurrencyCode }}</span>
+  </mat-form-field>
+</div>
+
+<p>formatNumber: {{ localeCurrencyCode }} {{ amountFormattedNumber }}</p>
+<p>formatCurrency: {{ amountFormattedCurrency }}</p>

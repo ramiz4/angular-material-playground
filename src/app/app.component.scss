@@ -1,0 +1,28 @@
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-prefix,
+  .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: 0 !important;
+    margin-right: 0.25em;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.8em 0 1em 0;
+  }
+
+  .mat-form-field:not(.mat-form-field-appearance-legacy)
+    .mat-form-field-prefix
+    .mat-icon-button,
+  .mat-form-field:not(.mat-form-field-appearance-legacy)
+    .mat-form-field-suffix
+    .mat-icon-button {
+    top: 0.25em;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+button {
+  margin-right: 1em;
+}
